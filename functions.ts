@@ -29,3 +29,9 @@ function topla5(x:number,y?:number):number{
 }
 
 console.log(topla5(3,40));
+
+function davetEt(ilkDavetli: string, ...digerleri: string[]): string {
+    return ilkDavetli + " " + digerleri.join(" ");
+}
+
+console.log(davetEt("Hilal","Enes","Ömer"))

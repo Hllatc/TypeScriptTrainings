@@ -23,3 +23,11 @@ function topla5(x, y) {
     return x;
 }
 console.log(topla5(3, 40));
+function davetEt(ilkDavetli) {
+    var digerleri = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        digerleri[_i - 1] = arguments[_i];
+    }
+    return ilkDavetli + " " + digerleri.join(" ");
+}
+console.log(davetEt("Hilal", "Enes", "Ömer"));
