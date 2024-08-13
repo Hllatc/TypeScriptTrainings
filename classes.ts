@@ -1,4 +1,4 @@
-class Ev{
+class Ev2{
     _odaSayisi:number;
     _pencereSayisi:number;
     _kat:number;
@@ -13,6 +13,38 @@ class Ev{
     }
 }
 
-let ev =new Ev(3,4,5);
+class Kisi{
+    private _isim:string;
 
-ev.yemekYe();
+    get isim():string{
+        return "Sayın "+this._isim;
+    }
+    set isim(ad:string){
+        this._isim=ad
+    }
+    kaydet(){
+        console.log("Kişi kaydedildi.")
+    }
+}
+
+class Musteri extends Kisi{
+    satisYap(){
+        console.log("Satış yapıldı.")
+    }
+}
+
+class Personel extends Kisi{
+    maasOde(){
+        console.log("Maaş ödendi.")
+    }
+}
+
+let musteri=new Musteri();
+musteri.isim="Hilal"
+console.log(musteri.isim)
+musteri.kaydet();
+musteri.satisYap();
+
+let personel=new Personel();
+personel.kaydet();
+personel.maasOde();
